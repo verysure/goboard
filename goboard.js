@@ -1,8 +1,8 @@
 // Random Package
 
 // Database
-Steps = new Mongo.Collection("steps");
-Messages = new Mongo.Collection("messages");
+Steps = new Mongo.Collection("steps", {capped: true, size: 247000000});
+Messages = new Mongo.Collection("messages", {capped: true, size: 247000000});
 
 // Router
 Router.route('/', function () {
