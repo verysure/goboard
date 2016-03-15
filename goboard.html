@@ -1,0 +1,64 @@
+<head>
+    <title>BetaGo</title>
+</head>
+
+<body>
+    <h1>BetaGo</h1>
+
+</body>
+
+<!-- boards -->
+<template name="board">
+    <!-- Functionalities -->
+    {{> boardfunctions}}
+    <!-- Canvas -->
+    {{> boardcanvas}}
+
+    <!-- Canvas -->
+    {{> chatroom}}
+
+</template>
+
+<template name="boardfunctions">
+    <p>
+        <a href='/'>回到列表</a> 說明: 左鍵黑棋 右鍵白棋 點同一位置消除
+        <button type='button' class='clear'>清除全部</button>
+    </p>
+</template>
+
+<template name="boardcanvas">
+    <canvas id="goboard" width="550" height="550"></canvas>
+</template>
+
+
+<!-- board chatroom -->
+
+<template name="chatroom">
+    <div class='chatdiv'>
+        <form class='chatform'>
+            <input type='text' name='username' class='username' placeholder='帳號' autocomplete='off'/><input type='text' name='message' class='message' placeholder='輸入訊息' autocomplete='off'/>
+            <br>
+            <textarea readonly class='message-area'>{{#each messages}}{{username}}: {{message}}
+{{/each}}</textarea>
+            <input type='submit' style='display:none;'/>
+        </form>
+    </div>
+</template>
+
+
+<!-- homepage -->
+<template name="home">
+    <form class='newboard'>
+        <input type='submit' value='新增棋盤'/>:
+        <input type='text' name='boardname'/>
+    </form>
+
+    <p>棋盤列表:</p>
+    <ul>
+        {{#each boards}}
+        <li><a href='/b/{{board_id}}'>{{board_id}}</a></li>
+        {{/each}}
+    </ul>
+</template>
+
+

@@ -1,0 +1,27 @@
+/* CSS declarations go here */
+h1 {
+    font-size: 30px;
+    font-family: 'helvetica';
+}
+
+canvas {
+    float: left;
+}
+
+
+.chatdiv {
+    height: 550px;
+    /* width: 550px; */
+    float: left;
+}
+
+.username {
+    width: 100px;
+}
+.message{
+    width: 200px;
+}
+.message-area{
+    width: 300px;
+    height: 500px;
+}
