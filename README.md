@@ -6,4 +6,4 @@ This project is a demonstration for live [Go](https://en.wikipedia.org/wiki/Go_(
 Development
 -----------
 
-This project is developed with [Meteor](https://www.meteor.com/). It uses random and iron-router addons. The project is served at [BetaGo](http://betago.meteor.com).
+This project is developed with [Meteor](https://www.meteor.com/). It uses random and iron-router addons. The project is served at [BetaGo](http://betago.herokuapp.com).
